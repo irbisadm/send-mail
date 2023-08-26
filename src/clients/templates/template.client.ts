@@ -7,7 +7,7 @@ import {TemplateEditParams} from "./template-edit.params";
 import {TemplateSearchResponse} from "./template-search.response";
 import {TemplateSearchParams} from "./template-search.params";
 
-class TemplatesClient extends BaseClient{
+class TemplateClient extends BaseClient{
   async add(params:Template):Promise<TemplateResponse>{
     return this.request.post<TemplateResponse>('/template/add', params as unknown as Record<string, unknown>);
   };
@@ -25,4 +25,4 @@ class TemplatesClient extends BaseClient{
   };
 }
 
-export {TemplatesClient}
+export {TemplateClient}

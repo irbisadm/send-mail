@@ -4,7 +4,7 @@ import {WebhookResponse} from "./webhook.response";
 import {WebhookRemoveParams} from "./webhook-remove.params";
 import {WebhookViewResponse} from "./webhook-view.response";
 
-class WebhooksClient extends BaseClient{
+class WebhookClient extends BaseClient{
   async add(params:Omit<Webhook,'id'>):Promise<WebhookResponse>{
     return this.request.post<WebhookResponse>('/webhook/add', params as unknown as Record<string, unknown>);
   };
@@ -18,4 +18,4 @@ class WebhooksClient extends BaseClient{
     return this.request.post<WebhookViewResponse>('/webhook/view', {});
   };
 }
-export {WebhooksClient};
+export {WebhookClient};

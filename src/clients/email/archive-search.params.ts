@@ -2,11 +2,11 @@ interface ArchiveSearchParams{
   /**
    * datetime which defaults to current date at midnight. The range will be inclusive of start_date and exclusive of end_date. Timezone is UTC.
    */
-  start_date?: Date;
+  startDate?: Date;
   /**
    * datetime which defaults to now. Timezone is UTC.
    */
-  end_date?:Date;
+  endDate?:Date;
   /**
    * The maximum number of emails to return. This defaults to 5,000, which is also the maximum value allowed.
    */

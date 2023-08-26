@@ -1,8 +1,8 @@
 import {DomainParams} from "./domain.params";
 
 interface DomainSubdomainParams extends DomainParams {
-  new_subdomain: string;
-  old_subdomain: string;
+  newSubdomain: string;
+  oldSubdomain: string;
 }
 
 export {DomainSubdomainParams}

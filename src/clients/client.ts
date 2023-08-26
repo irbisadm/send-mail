@@ -1,17 +1,17 @@
 import {Options} from "./options";
 import {Smtp2goRequest} from "../request";
 import {ActivityClient} from "./activity";
-import {AllowedSendersClient} from "./allowed-senders";
+import {AllowedSenderClient} from "./allowed-senders";
 import {DomainClient} from "./domain";
 import {EmailClient} from "./email";
-import {SingleSenderEmailsClient} from "./single-sender-emails";
-import {SmtpUsersClient} from "./smtp-users";
+import {SingleSenderEmailClient} from "./single-sender-emails";
+import {SmtpUserClient} from "./smtp-users";
 import {StatisticsClient} from "./statistics";
-import {SubaccountsClient} from "./subaccounts";
-import {SuppressionsClient} from "./suppressions";
-import {TemplatesClient} from "./templates";
+import {SubaccountClient} from "./subaccounts";
+import {SuppressionClient} from "./suppressions";
+import {TemplateClient} from "./templates";
 import {SmsClient} from "./sms";
-import {WebhooksClient} from "./webhooks";
+import {WebhookClient} from "./webhooks";
 
 class Client{
   /**
@@ -21,7 +21,7 @@ class Client{
   /**
    * If you'd like only certain sender email addresses to be able to send emails through your account, you can specify the details with these endpoints. https://apidoc.smtp2go.com/documentation/#/Activity
    */
-  readonly allowedSenders:AllowedSendersClient;
+  readonly allowedSender:AllowedSenderClient;
   /**
    * Send an email, or retrieve details of past emails that have been sent. https://apidoc.smtp2go.com/documentation/#/Emails
    */
@@ -33,11 +33,11 @@ class Client{
   /**
    * Manage single sender emails for your account to authorize individual email addresses to send emails where you are unable to otherwise add a sender domain.  https://apidoc.smtp2go.com/documentation/#/Single%20Sender%20Emails
    */
-  readonly singleSenderEmails:SingleSenderEmailsClient;
+  readonly singleSenderEmail:SingleSenderEmailClient;
   /**
    * Manage the SMTP users in your account. https://apidoc.smtp2go.com/documentation/#/SMTP%20Users
    */
-  readonly smtpUsers:SmtpUsersClient;
+  readonly smtpUser:SmtpUserClient;
   /**
    * Retrieve different statistical reports for your account. https://apidoc.smtp2go.com/documentation/#/Statistics
    */
@@ -45,15 +45,15 @@ class Client{
   /**
    * Manage the list of email addresses and domains that are automatically suppressed from receiving emails. https://apidoc.smtp2go.com/documentation/#/Suppressions
    */
-  readonly suppressions:SuppressionsClient;
+  readonly suppression:SuppressionClient;
   /**
    * https://apidoc.smtp2go.com/documentation/#/Subaccounts
    */
-  readonly subaccounts:SubaccountsClient;
+  readonly subaccount:SubaccountClient;
   /**
    * Manage your personal email templates. https://apidoc.smtp2go.com/documentation/#/Templates
    */
-  readonly templates:TemplatesClient;
+  readonly template:TemplateClient;
   /**
    * Send an SMS message. https://apidoc.smtp2go.com/documentation/#/SMS
    */
@@ -61,23 +61,23 @@ class Client{
   /**
    * https://apidoc.smtp2go.com/documentation/#/Webhooks
    */
-  readonly webhooks:WebhooksClient;
+  readonly webhook:WebhookClient;
 
   private readonly request:Smtp2goRequest;
   constructor(options:Options){
     this.request = new Smtp2goRequest(options);
     this.activity = new ActivityClient(this.request);
-    this.allowedSenders = new AllowedSendersClient(this.request);
+    this.allowedSender = new AllowedSenderClient(this.request);
     this.email = new EmailClient(this.request);
     this.domain = new DomainClient(this.request);
-    this.singleSenderEmails = new SingleSenderEmailsClient(this.request);
-    this.smtpUsers = new SmtpUsersClient(this.request);
+    this.singleSenderEmail = new SingleSenderEmailClient(this.request);
+    this.smtpUser = new SmtpUserClient(this.request);
     this.statistics = new StatisticsClient(this.request);
-    this.suppressions = new SuppressionsClient(this.request);
-    this.subaccounts = new SubaccountsClient(this.request);
-    this.templates = new TemplatesClient(this.request);
+    this.suppression = new SuppressionClient(this.request);
+    this.subaccount = new SubaccountClient(this.request);
+    this.templates = new TemplateClient(this.request);
     this.sms = new SmsClient(this.request);
-    this.webhooks = new WebhooksClient(this.request);
+    this.webhook = new WebhookClient(this.request);
   }
 }
 

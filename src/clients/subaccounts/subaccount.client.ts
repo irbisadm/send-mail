@@ -1,6 +1,6 @@
 import {BaseClient} from "../base.client";
 
-class SubaccountsClient extends BaseClient{
+class SubaccountClient extends BaseClient{
   async add(){
     throw 'Not implemented'
   };
@@ -23,4 +23,4 @@ class SubaccountsClient extends BaseClient{
     throw 'Not implemented'
   };
 }
-export {SubaccountsClient}
+export {SubaccountClient}

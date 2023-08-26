@@ -1,6 +1,6 @@
 import {BaseClient} from "../base.client";
 
-class SuppressionsClient extends BaseClient{
+class SuppressionClient extends BaseClient{
   async add(){
     throw 'Not implemented'
   };
@@ -11,4 +11,4 @@ class SuppressionsClient extends BaseClient{
     throw 'Not implemented'
   };
 }
-export {SuppressionsClient};
+export {SuppressionClient};

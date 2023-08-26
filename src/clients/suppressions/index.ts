@@ -1,1 +1,1 @@
-export * from './suppressions.client';
+export * from './suppression.client';

@@ -6,11 +6,11 @@ interface SmsViewResponse extends Smtp2GoResponse{
       /**
        * The SMS sender number.
        */
-      source_address: string;
+      sourceAddress: string;
       /**
        * The SMS recipient number.
        */
-      destination_address: string;
+      destinationAddress: string;
       /**
        * Message timestamp.
        */

@@ -1,1 +1,1 @@
-export * from './subaccounts.client';
+export * from './subaccount.client';

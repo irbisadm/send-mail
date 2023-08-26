@@ -2,11 +2,11 @@ interface TemplateSearchParams{
   /**
    * Determines if search terms are matched exactly or using wildcards
    */
-  fuzzy_search: boolean;
+  fuzzySearch: boolean;
   /**
    * An array of strings to search on
    */
-  search_terms: string[];
+  searchTerms: string[];
   /**
    * An array of tags to search on
    */
@@ -14,15 +14,15 @@ interface TemplateSearchParams{
   /**
    * Sort direction, sorts either asc or desc by template name
    */
-  sort_direction: 'asc'|'desc';
+  sortDirection: 'asc'|'desc';
   /**
    * Number of templates to retrieve per call
    */
-  page_size?: number;
+  pageSize?: number;
   /**
    * A token provided by a prior call to this endpoint, passing this will cause it to fetch the next page of results
    */
-  continue_token?: string;
+  continueToken?: string;
 }
 
 export {TemplateSearchParams}

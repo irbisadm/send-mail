@@ -1,1 +1,1 @@
-export * from './smtp-users.client'
+export * from './smtp-user.client'

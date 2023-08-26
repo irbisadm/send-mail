@@ -6,7 +6,7 @@ interface TemplateSearchResponse extends Smtp2GoResponse{
     /**
      * If present can be passed to the call again in order to retrieve the next page of results
      */
-    continue_token?: string;
+    continueToken?: string;
     /**
      * A list of templates matching the search criteria
      */
@@ -14,7 +14,7 @@ interface TemplateSearchResponse extends Smtp2GoResponse{
     /**
      * The total number of templates available
      */
-    total_count: number;
+    totalCount: number;
   }
 }
 

@@ -1,6 +1,6 @@
 import {BaseClient} from "../base.client";
 
-class SmtpUsersClient extends BaseClient{
+class SmtpUserClient extends BaseClient{
   async add(){
     throw 'Not implemented'
   };
@@ -12,4 +12,4 @@ class SmtpUsersClient extends BaseClient{
   };
 }
 
-export {SmtpUsersClient}
+export {SmtpUserClient}

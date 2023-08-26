@@ -2,7 +2,7 @@ interface Template{
   /**
    * The name of the template
    */
-  template_name: string;
+  templateName: string;
   /**
    * The id of the template
    */
@@ -14,15 +14,15 @@ interface Template{
   /**
    * The HTML body text of the email template
    */
-  html_body: string;
+  htmlBody: string;
   /**
    * The text body of the email template
    */
-  text_body: string;
+  textBody: string;
   /**
    * The variables to use with this template
    */
-  template_variables: Record<string, unknown>;
+  templateVariables: Record<string, unknown>;
   /**
    * The tags to associate with this template
    */

@@ -1,6 +1,6 @@
 import {Smtp2GoResponse} from "../../request";
 
-interface SingleSenderEmailsViewResponse extends Smtp2GoResponse{
+interface SingleSenderEmailViewResponse extends Smtp2GoResponse{
   data:{
     /**
      * A list of senders that were returned by the last action
@@ -9,7 +9,7 @@ interface SingleSenderEmailsViewResponse extends Smtp2GoResponse{
       /**
        * The email address of the sender
        */
-      email_address: string;
+      emailAddress: string;
       /**
        * A flag indicating whether this email address has been verified
        */
@@ -17,4 +17,4 @@ interface SingleSenderEmailsViewResponse extends Smtp2GoResponse{
     }[]
   }
 }
-export {SingleSenderEmailsViewResponse}
+export {SingleSenderEmailViewResponse}
