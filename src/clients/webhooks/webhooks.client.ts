@@ -1,17 +1,21 @@
 import {BaseClient} from "../base.client";
+import {Webhook} from "./webhook";
+import {WebhookResponse} from "./webhook.response";
+import {WebhookRemoveParams} from "./webhook-remove.params";
+import {WebhookViewResponse} from "./webhook-view.response";
 
 class WebhooksClient extends BaseClient{
-  async add(){
-    throw 'Not implemented'
+  async add(params:Omit<Webhook,'id'>):Promise<WebhookResponse>{
+    return this.request.post<WebhookResponse>('/webhook/add', params as unknown as Record<string, unknown>);
   };
-  async edit(){
-    throw 'Not implemented'
+  async edit(params:Webhook):Promise<WebhookResponse>{
+    return this.request.post<WebhookResponse>('/webhook/edit', params as unknown as Record<string, unknown>);
   };
-  async remove(){
-    throw 'Not implemented'
+  async remove(params:WebhookRemoveParams):Promise<WebhookResponse>{
+    return this.request.post<WebhookResponse>('/webhook/remove', params as unknown as Record<string, unknown>);
   };
-  async view(){
-    throw 'Not implemented'
+  async view():Promise<WebhookViewResponse>{
+    return this.request.post<WebhookViewResponse>('/webhook/view', {});
   };
 }
 export {WebhooksClient};
