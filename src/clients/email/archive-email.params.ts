@@ -1,0 +1,5 @@
+interface ArchiveEmailParams{
+
+}
+
+export {ArchiveEmailParams}

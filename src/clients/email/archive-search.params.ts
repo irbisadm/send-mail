@@ -1,0 +1,4 @@
+interface ArchiveSearchParams{
+
+}
+export {ArchiveSearchParams}
