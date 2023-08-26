@@ -1,9 +1,12 @@
 # Community contributed client for Smtp2Go API
 
-## This package is a community contributed client for Smtp2Go API. It is not officially supported nor created by Smtp2Go API.
+## This package is a community contributed client for Smtp2Go API. It is not officially supported nor created by Smtp2Go.
 
 If you have any problem or question, please, contact contributors of this package at GitHub.
 
+## Pre-requisites
+
+You must have a Smtp2Go account to use this library. You can sign up for an account at https://www.smtp2go.com/
 
 ## Installation
 ```bash
