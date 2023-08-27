@@ -1,4 +1,4 @@
-import {EventType} from "../event-type";
+import {EventType} from "./event-type";
 
 interface ActivityEvent {
   From?: string;

@@ -1,17 +1,17 @@
 import {Options} from "./options";
 import {Smtp2goRequest} from "../request";
 import {ActivityClient} from "./activity";
-import {AllowedSenderClient} from "./allowed-senders";
+import {AllowedSenderClient} from "./allowed-sender";
 import {DomainClient} from "./domain";
 import {EmailClient} from "./email";
-import {SingleSenderEmailClient} from "./single-sender-emails";
-import {SmtpUserClient} from "./smtp-users";
+import {SingleSenderEmailClient} from "./single-sender-email";
+import {SmtpUserClient} from "./smtp-user";
 import {StatisticsClient} from "./statistics";
-import {SubaccountClient} from "./subaccounts";
-import {SuppressionClient} from "./suppressions";
-import {TemplateClient} from "./templates";
+import {SubaccountClient} from "./subaccount";
+import {SuppressionClient} from "./suppression";
+import {TemplateClient} from "./template";
 import {SmsClient} from "./sms";
-import {WebhookClient} from "./webhooks";
+import {WebhookClient} from "./webhook";
 
 class Client{
   /**
@@ -75,7 +75,7 @@ class Client{
     this.statistics = new StatisticsClient(this.request);
     this.suppression = new SuppressionClient(this.request);
     this.subaccount = new SubaccountClient(this.request);
-    this.templates = new TemplateClient(this.request);
+    this.template = new TemplateClient(this.request);
     this.sms = new SmsClient(this.request);
     this.webhook = new WebhookClient(this.request);
   }

@@ -3,7 +3,7 @@ function toCamelCase(source:Record<string, unknown>):Record<string, unknown>{
   for (const [key, value] of Object.entries(source)) {
     const camelCaseKey = key.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
     if(typeof source[key] === 'object' && !Array.isArray(source[key])){
-      result[camelCaseKey] = toCamelCase(value);
+      result[camelCaseKey] = toCamelCase(value as Record<string, unknown>);
     } else {
       result[camelCaseKey] = value;
     }

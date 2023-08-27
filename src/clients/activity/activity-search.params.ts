@@ -1,4 +1,4 @@
-import {EventType} from "../event-type";
+import {EventType} from "./event-type";
 
 interface ActivitySearchParams {
   subaccountIds?: number[];
