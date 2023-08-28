@@ -18,9 +18,21 @@ const replacePlugin = replace({
 export default [
     {
         input: 'src/index.ts',
-        external: ['crypto'],
+        external: ['path','fs'],
         output: {
             format: 'es', file: 'dist/index.mjs'
+        },
+        plugins: [
+            typescript({tsconfig: './tsconfig.json'}),
+            replacePlugin,
+            terser(),
+        ],
+    },
+    {
+        input: 'src/index.ts',
+        external: ['path','fs'],
+        output: {
+            format: 'cjs', file: 'dist/index.js'
         },
         plugins: [
             typescript({tsconfig: './tsconfig.json'}),

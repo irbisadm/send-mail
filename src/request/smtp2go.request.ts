@@ -9,17 +9,19 @@ import {fromStrDate} from "./from-str-date";
 class Smtp2goRequest{
   constructor(private options:Options) {
   }
-  async post<T = Smtp2GoResponse >(url:string, body:Record<string, unknown>):Promise<T>{
+  async post<T = Smtp2GoResponse >(endpoint:string, requestBody:Record<string, unknown>):Promise<T>{
     const abortController = new AbortController();
     const {signal } = abortController;
     const requestTimeout =  setTimeout(() => abortController.abort(), this.options.timeout);
+    const body = JSON.stringify({...this.transformRequest(requestBody), api_key: this.options.key});
+    const url = this.options.url+endpoint;
     const response = await fetch(url,{
-      method: 'post',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'User-Agent': `__lib_full_name__ (engine v${process.version})`,
       },
-      body: JSON.stringify({...this.transformRequest(body), api_key: this.options.key}),
+      body,
       signal
     });
     clearTimeout(requestTimeout);

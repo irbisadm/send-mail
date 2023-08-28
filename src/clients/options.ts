@@ -5,7 +5,7 @@ interface Options{
   key: string;
   /**
    * The SMTP2GO API's base URL. You can use this to override the default API URL. Default value is "https://api.smtp2go.com/v3/"
-   * @default https://api.smtp2go.com/v3/
+   * @default https://api.smtp2go.com/v3
    */
   url?: string;
   /**

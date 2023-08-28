@@ -2,7 +2,7 @@ import {Client, Options} from "./clients";
 
 const CLIENT_DEFAULT_OPTIONS: Options = {
   key: "",
-  url: "https://api.smtp2go.com/v3/",
+  url: "https://api.smtp2go.com/v3",
   timeout: 5000,
 }
 
