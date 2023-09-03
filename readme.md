@@ -1,26 +1,20 @@
 # Community contributed client for Smtp2Go API
 
-## This package is a community contributed client for Smtp2Go API. It is not officially supported nor created by Smtp2Go.
-
-If you have any problem or question, please, contact contributors of this package at GitHub.
-
-## Pre-requisites
-
-You must have a Smtp2Go account to use this library. You can sign up for an account at https://www.smtp2go.com/
-
 ## Installation
 ```bash
-npm install @irbisadm/smtp2go --save
+npm install @irbisadm/send-mail --save
 # or
-yarn add @irbisadm/smtp2go
+yarn add @irbisadm/send-mail
 ```
 
 ## Usage
 
-The example below shows how to send email with attachments using this library.
+The example below shows how to send email with attachments using this library with Smtp2Go provider. 
+
+You can sign up for an account at https://www.smtp2go.com/
 
 ```typescript
-import {Smtp2Go} from '@irbisadm/smtp2go';
+import {Smtp2Go} from '@irbisadm/mail-sender';
 
 const smtp2Go = new Smtp2Go();
 const client = smtp2Go.client({
@@ -43,6 +37,11 @@ const sendReport = await client.email.send({
   attachments
 });
 ```
+
+
+## This package includes community contributed client for Smtp2Go API. It is not officially supported nor created by Smtp2Go.
+
+If you have any problem or question, please, contact contributors of this package at GitHub.
 
 
 ## License (MIT)
