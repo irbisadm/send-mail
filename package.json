@@ -12,6 +12,9 @@
     "./dist/index.d.ts",
     "./readme.md"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.3",
